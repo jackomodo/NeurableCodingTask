@@ -11,6 +11,12 @@
 		1B8DAE8C2BD6B1E000FF842D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8DAE8B2BD6B1E000FF842D /* ContentView.swift */; };
 		1B8DAE8E2BD6B1E100FF842D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B8DAE8D2BD6B1E100FF842D /* Assets.xcassets */; };
 		1B8DAE912BD6B1E100FF842D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B8DAE902BD6B1E100FF842D /* Preview Assets.xcassets */; };
+		1B8DAE992BD6B1F100FF842D /* ProtobufValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8DAE972BD6B1F100FF842D /* ProtobufValidator.swift */; };
+		1B8DAE9A2BD6B1F100FF842D /* session.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8DAE982BD6B1F100FF842D /* session.pb.swift */; };
+		1B8DAE9D2BD6BDE300FF842D /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 1B8DAE9C2BD6BDE300FF842D /* SwiftProtobuf */; };
+		1B8DAE9F2BD6BDE300FF842D /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 1B8DAE9E2BD6BDE300FF842D /* SwiftProtobufPluginLibrary */; };
+		1B8DAEA12BD6BDE300FF842D /* protoc-gen-swift in Frameworks */ = {isa = PBXBuildFile; productRef = 1B8DAEA02BD6BDE300FF842D /* protoc-gen-swift */; };
+		1B8DAEA52BD9E90600FF842D /* ContenView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8DAEA42BD9E90600FF842D /* ContenView-ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,9 @@
 		1B8DAE8B2BD6B1E000FF842D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1B8DAE8D2BD6B1E100FF842D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B8DAE902BD6B1E100FF842D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1B8DAE972BD6B1F100FF842D /* ProtobufValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtobufValidator.swift; sourceTree = "<group>"; };
+		1B8DAE982BD6B1F100FF842D /* session.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = session.pb.swift; sourceTree = "<group>"; };
+		1B8DAEA42BD9E90600FF842D /* ContenView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContenView-ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +35,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B8DAE9F2BD6BDE300FF842D /* SwiftProtobufPluginLibrary in Frameworks */,
+				1B8DAE9D2BD6BDE300FF842D /* SwiftProtobuf in Frameworks */,
+				1B8DAEA12BD6BDE300FF842D /* protoc-gen-swift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +65,9 @@
 			children = (
 				1B8DAE892BD6B1E000FF842D /* NeurableCodingTaskApp.swift */,
 				1B8DAE8B2BD6B1E000FF842D /* ContentView.swift */,
+				1B8DAEA42BD9E90600FF842D /* ContenView-ViewModel.swift */,
+				1B8DAE972BD6B1F100FF842D /* ProtobufValidator.swift */,
+				1B8DAE982BD6B1F100FF842D /* session.pb.swift */,
 				1B8DAE8D2BD6B1E100FF842D /* Assets.xcassets */,
 				1B8DAE8F2BD6B1E100FF842D /* Preview Content */,
 			);
@@ -83,6 +98,11 @@
 			dependencies = (
 			);
 			name = NeurableCodingTask;
+			packageProductDependencies = (
+				1B8DAE9C2BD6BDE300FF842D /* SwiftProtobuf */,
+				1B8DAE9E2BD6BDE300FF842D /* SwiftProtobufPluginLibrary */,
+				1B8DAEA02BD6BDE300FF842D /* protoc-gen-swift */,
+			);
 			productName = NeurableCodingTask;
 			productReference = 1B8DAE862BD6B1E000FF842D /* NeurableCodingTask.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +131,9 @@
 				Base,
 			);
 			mainGroup = 1B8DAE7D2BD6B1E000FF842D;
+			packageReferences = (
+				1B8DAE9B2BD6BDE300FF842D /* XCRemoteSwiftPackageReference "swift-protobuf" */,
+			);
 			productRefGroup = 1B8DAE872BD6B1E000FF842D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +161,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B8DAE8C2BD6B1E000FF842D /* ContentView.swift in Sources */,
+				1B8DAEA52BD9E90600FF842D /* ContenView-ViewModel.swift in Sources */,
 				1B8DAE8A2BD6B1E000FF842D /* NeurableCodingTaskApp.swift in Sources */,
+				1B8DAE992BD6B1F100FF842D /* ProtobufValidator.swift in Sources */,
+				1B8DAE9A2BD6B1F100FF842D /* session.pb.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +368,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1B8DAE9B2BD6BDE300FF842D /* XCRemoteSwiftPackageReference "swift-protobuf" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-protobuf.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.26.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1B8DAE9C2BD6BDE300FF842D /* SwiftProtobuf */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B8DAE9B2BD6BDE300FF842D /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobuf;
+		};
+		1B8DAE9E2BD6BDE300FF842D /* SwiftProtobufPluginLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B8DAE9B2BD6BDE300FF842D /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobufPluginLibrary;
+		};
+		1B8DAEA02BD6BDE300FF842D /* protoc-gen-swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B8DAE9B2BD6BDE300FF842D /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = "protoc-gen-swift";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1B8DAE7E2BD6B1E000FF842D /* Project object */;
 }
