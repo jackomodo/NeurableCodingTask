@@ -20,8 +20,7 @@ struct ContentView: View {
                         y: .value("Focus Level", $0.focusLevel)
                     )
                 }
-                
-                .chartXScale(domain: 0...30)
+                .chartXScale(domain: viewModel.xAxisRange)
                 .onReceive(viewModel.timer, perform: viewModel.updateData)
                 Button {
                     viewModel.sessionButtonTapped()

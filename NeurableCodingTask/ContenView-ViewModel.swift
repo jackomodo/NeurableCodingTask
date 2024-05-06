@@ -11,6 +11,7 @@ extension ContentView {
     @Observable
     class ViewModel {
         var seconds = 0
+        var xAxisRange = [0, 30]
         var isTimerRunning = false
         let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
         var data = [FocusData_Session.DataSample]()
@@ -29,14 +30,10 @@ extension ContentView {
         func updateData(_: Date) {
             if isTimerRunning {
                 seconds += 1
-                if data.count > 30 {
-                    data.remove(at: 0)
+                if seconds > 30 {
+                    xAxisRange = xAxisRange.map { $0 + 1 }
                 }
-                let newData = getRandomDataSample(seconds: Int32(seconds))
-                if newData.focusLevel != 0 {
-                   data.append(newData)
-                }
-                print(newData)
+                data.append(getRandomDataSample(seconds: Int32(seconds)))
             }
         }
         
