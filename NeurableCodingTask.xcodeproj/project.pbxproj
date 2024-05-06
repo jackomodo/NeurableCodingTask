@@ -17,6 +17,7 @@
 		1B8DAE9F2BD6BDE300FF842D /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 1B8DAE9E2BD6BDE300FF842D /* SwiftProtobufPluginLibrary */; };
 		1B8DAEA12BD6BDE300FF842D /* protoc-gen-swift in Frameworks */ = {isa = PBXBuildFile; productRef = 1B8DAEA02BD6BDE300FF842D /* protoc-gen-swift */; };
 		1B8DAEA52BD9E90600FF842D /* ContenView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8DAEA42BD9E90600FF842D /* ContenView-ViewModel.swift */; };
+		1BD74DA22BE98B9C00884545 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD74DA12BE98B9C00884545 /* ChartData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1B8DAE972BD6B1F100FF842D /* ProtobufValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtobufValidator.swift; sourceTree = "<group>"; };
 		1B8DAE982BD6B1F100FF842D /* session.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = session.pb.swift; sourceTree = "<group>"; };
 		1B8DAEA42BD9E90600FF842D /* ContenView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContenView-ViewModel.swift"; sourceTree = "<group>"; };
+		1BD74DA12BE98B9C00884545 /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				1B8DAE892BD6B1E000FF842D /* NeurableCodingTaskApp.swift */,
 				1B8DAE8B2BD6B1E000FF842D /* ContentView.swift */,
 				1B8DAEA42BD9E90600FF842D /* ContenView-ViewModel.swift */,
+				1BD74DA12BE98B9C00884545 /* ChartData.swift */,
 				1B8DAE972BD6B1F100FF842D /* ProtobufValidator.swift */,
 				1B8DAE982BD6B1F100FF842D /* session.pb.swift */,
 				1B8DAE8D2BD6B1E100FF842D /* Assets.xcassets */,
@@ -164,6 +167,7 @@
 				1B8DAEA52BD9E90600FF842D /* ContenView-ViewModel.swift in Sources */,
 				1B8DAE8A2BD6B1E000FF842D /* NeurableCodingTaskApp.swift in Sources */,
 				1B8DAE992BD6B1F100FF842D /* ProtobufValidator.swift in Sources */,
+				1BD74DA22BE98B9C00884545 /* ChartData.swift in Sources */,
 				1B8DAE9A2BD6B1F100FF842D /* session.pb.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

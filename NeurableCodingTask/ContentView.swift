@@ -10,15 +10,18 @@ import Charts
 
 struct ContentView: View {
     @State private var viewModel = ViewModel()
-    
+
     var body: some View {
         NavigationStack {
             VStack {
-                Chart(viewModel.data, id: \.self) {
-                    LineMark(
-                        x: .value("Seconds", $0.offsetSeconds),
-                        y: .value("Focus Level", $0.focusLevel)
-                    )
+                Chart {
+                    ForEach(viewModel.chartData) { chartData in
+                        LineMark(
+                            x: .value("Seconds", chartData.data.offsetSeconds),
+                            y: .value("Focus Level", chartData.data.focusLevel),
+                            series: .value(chartData.id, chartData.id)
+                        )
+                    }
                 }
                 .chartXScale(domain: viewModel.xAxisRange)
                 .onReceive(viewModel.timer, perform: viewModel.updateData)
@@ -37,7 +40,7 @@ struct ContentView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    if !viewModel.data.isEmpty && !viewModel.isTimerRunning {
+                    if !viewModel.chartData.isEmpty && !viewModel.isTimerRunning {
                         Button {
                             viewModel.saveSession()
                         } label: {
