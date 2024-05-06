@@ -26,12 +26,26 @@ extension ContentView {
             return data
         }
         
-        func startSessionTimer() {
-            data = []
-            seconds = 0
+        func updateData(_: Date) {
+            if isTimerRunning {
+                seconds += 1
+                if data.count > 30 {
+                    data.remove(at: 0)
+                }
+                let newData = getRandomDataSample(seconds: Int32(seconds))
+                if newData.focusLevel != 0 {
+                   data.append(newData)
+                }
+                print(newData)
+            }
         }
         
-        func endSessionTimer() {
+        func sessionButtonTapped() {
+            if !isTimerRunning {
+                data = []
+                seconds = 0
+            }
+            isTimerRunning.toggle()
         }
         
         func saveSession() {

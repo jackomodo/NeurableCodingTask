@@ -20,22 +20,11 @@ struct ContentView: View {
                         y: .value("Focus Level", $0.focusLevel)
                     )
                 }
-                .onReceive(viewModel.timer) { time in
-                    if viewModel.isTimerRunning {
-                        viewModel.seconds += 1
-                        if viewModel.data.count > 30 {
-                            viewModel.data.remove(at: 0)
-                        }
-                        viewModel.data.append(viewModel.getRandomDataSample(seconds: Int32(viewModel.seconds)))
-                    }
-                }
+                
+                .chartXScale(domain: 0...30)
+                .onReceive(viewModel.timer, perform: viewModel.updateData)
                 Button {
-                    if viewModel.isTimerRunning {
-                        viewModel.endSessionTimer()
-                    } else if !viewModel.isTimerRunning {
-                        viewModel.startSessionTimer()
-                    }
-                    viewModel.isTimerRunning.toggle()
+                    viewModel.sessionButtonTapped()
                 } label: {
                     Text(viewModel.isTimerRunning ? "Stop Session" : "Begin Session")
                         .foregroundColor(.white)
@@ -46,6 +35,7 @@ struct ContentView: View {
                 .padding()
             }
             .navigationTitle("Focus Level")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     if !viewModel.data.isEmpty && !viewModel.isTimerRunning {
